@@ -6,7 +6,7 @@ if (dir.exists("RUtils") ) {
   source(utilFile("saveChart.R"))
 } else {
   #un comment for production
-  testingRUtils = TRUE
+  #testingRUtils = TRUE
   if (testingRUtils) {
     source("./CodeHome.R")
     utilPath = "./"
