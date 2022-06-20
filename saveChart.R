@@ -1,15 +1,15 @@
 library("tidyverse")
 library("lubridate")
 
-source("./R/CodeHome.R")
+source("./RUtils/CodeHome.R")
 
-saveChart <- function(fileName = "Chart", chart, dir = outputPath, theDate = NULL, onlyLatest = TRUE) {
+saveChart <- function(fileName = "Chart", chart, theDate = NULL, onlyLatest = TRUE) {
   scaleFactor = 0.5
   if (is.null(theDate)) theDate = today()
-  
+
   if (!onlyLatest) {
     ggsave(
-      paste(dir,format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = ""),
+      outputFile(paste(format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = "")),
       chart,
       device = "png",
       width = 16 / scaleFactor,
@@ -18,23 +18,21 @@ saveChart <- function(fileName = "Chart", chart, dir = outputPath, theDate = NUL
     )
   }
   ggsave(
-    paste(dir,"Latest-",fileName,".png",sep = ""),
+    outputFile(paste("Latest-",fileName,".png",sep = "")),
     chart,
     device = "png",
     width = 16 / scaleFactor,
     height = 9 / scaleFactor,
     units = "cm",
   )
-  
-  
 }
 
-saveVertChart <- function(fileName = "Chart", chart, dir = outputPath,theDate = NULL, onlyLatest = TRUE) {
+saveVertChart <- function(fileName = "Chart", chart, theDate = NULL, onlyLatest = TRUE) {
   scaleFactor = 0.5
   if (is.null(theDate)) theDate = today()
   if (!onlyLatest) {
     ggsave(
-      paste(dir,format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = ""),
+      outputFile(paste(format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = "")),
       chart,
       device = "png",
       width = 8 / scaleFactor,
@@ -44,24 +42,22 @@ saveVertChart <- function(fileName = "Chart", chart, dir = outputPath,theDate = 
   }
   # The Latest file
   ggsave(
-    paste(dir,"Latest-",fileName,".png",sep = ""),
+    outputFile(paste("Latest-",fileName,".png",sep = "")),
     chart,
     device = "png",
     width = 8 / scaleFactor,
     height = 11 / scaleFactor,
     units = "cm",
   )
-  
 }
 
-
-saveHorizChart <- function(fileName = "Chart", chart, dir = outputPath ,theDate = NULL, onlyLatest = TRUE) {
+saveHorizChart <- function(fileName = "Chart", chart ,theDate = NULL, onlyLatest = TRUE) {
   scaleFactor = 0.5
   if (is.null(theDate)) theDate = today()
 
   if (!onlyLatest) {
     ggsave(
-      paste(dir,format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = ""),
+      outputFile(paste(format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = "")),
       chart,
       device = "png",
       width = 13 / scaleFactor,
@@ -70,9 +66,8 @@ saveHorizChart <- function(fileName = "Chart", chart, dir = outputPath ,theDate 
     )
   }
   # The Latest file
-  
   ggsave(
-    paste(dir,"Latest-",fileName,".png",sep = ""),
+    outputFile(paste("Latest-",fileName,".png",sep = "")),
     chart,
     device = "png",
     width = 13 / scaleFactor,
@@ -81,13 +76,13 @@ saveHorizChart <- function(fileName = "Chart", chart, dir = outputPath ,theDate 
   )
 }
 
-saveSquareChart <- function(fileName = "Chart", chart, dir = outputPath,theDate = NULL, onlyLatest = TRUE) {
+saveSquareChart <- function(fileName = "Chart", chart, theDate = NULL, onlyLatest = TRUE) {
   scaleFactor = 0.5
   if (is.null(theDate)) theDate = today()
-  
+
   if (!onlyLatest) {
     ggsave(
-      paste(dir,format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = ""),
+      outputFile(paste(format.Date(theDate,"%Y-%m-%d-"),fileName,".png",sep = "")),
       chart,
       device = "png",
       width = 11 / scaleFactor,
@@ -96,12 +91,11 @@ saveSquareChart <- function(fileName = "Chart", chart, dir = outputPath,theDate 
     )
   }
   ggsave(
-    paste(dir,"Latest-",fileName,".png",sep = ""),
+    outputFile(paste("Latest-",fileName,".png",sep = "")),
     chart,
     device = "png",
     width = 11 / scaleFactor,
     height = 11 / scaleFactor,
     units = "cm",
   )
-  
 }

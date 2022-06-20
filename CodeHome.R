@@ -1,8 +1,12 @@
 homePath <- "./R/"
-codePath <- "./R/"
 
+codePath <- "./R/"
 outputPath <- "./Outputs/"
 refPath <- "./RefData/"
+inputPath <- "./Inputs/"
+utilPath <- "./RUtils/"
+
+# not sure if this is used..
 popDataPath <- "./RefData/AuPopData/"
 
 inputFile <- function(fileName) {
@@ -23,4 +27,8 @@ refFile <- function(fileName) {
 
 popFile <- function(fileName) {
   return(paste0(popDataPath,fileName))
+}
+
+utilFile <- function(fileName) {
+  return(paste0(utilPath,fileName))
 }
