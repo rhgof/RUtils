@@ -5,6 +5,7 @@ outputPath <- "./Outputs/"
 refPath <- "./RefData/"
 inputPath <- "./Inputs/"
 utilPath <- "./RUtils/"
+cachePath <- "./Inputs/cache/"
 
 # not sure if this is used..
 popDataPath <- "./RefData/AuPopData/"
@@ -31,4 +32,10 @@ popFile <- function(fileName) {
 
 utilFile <- function(fileName) {
   return(paste0(utilPath,fileName))
+}
+
+cacheFile <- function(fileName,extDisk=FALSE) {
+  if (extDisk) cachePath = "/Volumes/Samples/InputData/cache/"
+  dir.create(cachePath, showWarnings=FALSE)
+  return(paste0(cachePath,fileName))
 }
