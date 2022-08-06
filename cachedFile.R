@@ -2,8 +2,6 @@ suppressMessages(library("tidyverse"))
 suppressMessages(library("lubridate"))
 suppressMessages(library(curl))
 
-source("RUtils/RUtils.R")
-
 
 readCachedFile <- function(path, period = hours(1),extDrive = FALSE) {
   fileName <- basename(path)
