@@ -13,7 +13,7 @@ customTheme <- function () {
         plot.margin = ggplot2::margin(20,20,20,20),
         plot.background = ggplot2::element_rect(colour = "#F6F6F6", fill = "#F6F6F6"),
 
-        panel.grid.major = ggplot2::element_line(color="grey60",linewidth  = 0.1),
+        panel.grid.major = ggplot2::element_line(color="grey60", linewidth  = 0.1),
         panel.grid.minor.x = ggplot2::element_blank(),
         panel.grid.major.y = ggplot2::element_line(color = "gray85", linewidth = 0.1),
         #aspect.ratio = 900/1600,
