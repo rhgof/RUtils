@@ -1,0 +1,5 @@
+#library(png)
+#library(grid)
+#cc4ByPNG <- readPNG("./RUtils/cc4by.png")
+#cc4ByImage <- rasterGrob(cc4ByPNG, interpolate=TRUE)
+#annotation_custom(cc4ByImage)

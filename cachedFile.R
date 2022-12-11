@@ -1,10 +1,16 @@
-suppressMessages(library("tidyverse"))
 suppressMessages(library("lubridate"))
 suppressMessages(library(curl))
 
+library(RUtils)
 
-readCachedFile <- function(path, period = hours(1),extDrive = FALSE) {
-  fileName <- basename(path)
+readCachedFile <- function(path, uniqueName = NULL, period = hours(1),extDrive = FALSE) {
+
+  if ( is.null(uniqueName) ) {
+    fileName <- basename(path)
+  } else {
+    filename <- uniqueName
+  }
+
   cacheFile = cacheFile(fileName,extDrive)
 
   # cacheFile does not exist or older than period

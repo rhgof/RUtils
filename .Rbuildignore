@@ -1,0 +1,10 @@
+^RUtils\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^CodeHome\.R$
+^customTheme\.R$
+^RUtils\.R$
+^saveChart\.R$
+^cacheFile\.R$
+^captionChart\.R$
+^\*\.png$
