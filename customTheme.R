@@ -17,7 +17,7 @@ customTheme <- function () {
 
         panel.grid.major = element_line(color="grey60",linewidth = 0.1),
         panel.grid.minor.x = element_blank(),
-        panel.grid.major.y = element_line(color = "gray85", linewidth = 0.1),
+        panel.grid.major.y = element_line(color = "gray85",  linewidth = 0.1),
         #aspect.ratio = 900/1600,
 
         legend.text=element_text(colour="Grey40"),
