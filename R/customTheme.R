@@ -1,3 +1,4 @@
+#' custom theme entries that get reused across charts
 #' @export
 customTheme <- function () {
   ggplot2::theme_minimal() +

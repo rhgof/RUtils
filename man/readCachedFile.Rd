@@ -2,7 +2,7 @@
 % Please edit documentation in R/cachedFile.R
 \name{readCachedFile}
 \alias{readCachedFile}
-\title{for caching files that are used often}
+\title{readCachedFile}
 \usage{
 readCachedFile(
   path,
@@ -21,5 +21,8 @@ readCachedFile(
 \item{extDrive}{for large files to be stored on external drives}
 }
 \description{
+download and cache frequently used files
+}
+\details{
 for caching files that are used often
 }

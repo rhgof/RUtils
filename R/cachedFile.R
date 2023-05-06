@@ -1,4 +1,6 @@
 #' for caching files that are used often
+#' @title readCachedFile
+#' @description download and cache frequently used files
 #' @param path to file to cache
 #' @param uniqueName unique name for cached file in cases where path has common names
 #' @param period after which the cached file will no longer be valid
